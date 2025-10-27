@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>You've been hacked! (Just kidding)</title>
+  <style>
+    :root{
+      --bg:#05060a;
+      --neon:#39ffca;
+      --red:#ff4d6d;
+      --muted:#9aa0a6;
+    }
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,var(--bg) 0%, #071026 100%);color:var(--neon)}
+    .wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:2rem}
+    h1{font-size:3rem;margin:0 0 .4rem;color:var(--red);text-shadow:0 0 18px rgba(255,77,109,.15)}
+    .box{max-width:760px;background:rgba(255,255,255,0.03);padding:24px;border-radius:12px;border:1px solid rgba(57,255,202,0.06);backdrop-filter: blur(4px)}
+    p{color:var(--muted);line-height:1.5;margin:0}
+    .btn{display:inline-block;margin-top:18px;padding:10px 18px;border-radius:8px;background:var(--neon);color:#021018;text-decoration:none;font-weight:700}
+    small{display:block;margin-top:18px;color:#7f8990}
+    .matrix{font-family:monospace;color:#0f0;opacity:.06;position:fixed;left:0;top:0;pointer-events:none;user-select:none;white-space:pre;transform:scale(1.3)}
+    /* flashing warning bar */
+    .warn{margin-top:12px;padding:8px;border-radius:8px;background:linear-gradient(90deg, rgba(255,77,109,.12), rgba(57,255,202,.06));color:var(--red);font-weight:600}
+    /* typewriter */
+    .type {display:inline-block; border-right:2px solid rgba(255,255,255,0.12); padding-right:6px; white-space:nowrap; overflow:hidden; vertical-align:middle}
+    @keyframes typing { from { width: 0 } to { width: 20ch } }
+    @keyframes caret { 50% { border-color: transparent } }
+    .type.animated { width:20ch; animation: typing 2.6s steps(20,end), caret 1s steps(1,end) infinite; }
+  </style>
+</head>
+<body>
+  <div class="matrix" aria-hidden="true">
+    01011010 01100011 01010101 00101010 01010011 01100101 01000110
+  </div>
+
+  <div class="wrap">
+    <div class="box" role="main">
+      <h1>⚠️ You've been hacked! ⚠️</h1>
+      <p><span class="type animated">Access: DENIED — system compromised…</span></p>
+      <p style="margin-top:14px;color:var(--neon)"><strong>Just kidding — this is a harmless prank page.</strong></p>
+      <p style="margin-top:8px;color:var(--muted)">No data was accessed or taken. Your device and accounts are safe. This page only pretends to be dramatic for fun.</p>
+      <div class="warn">Only send this to friends who'll laugh — not to strangers or workplaces.</div>
+      <a class="btn" href="https://www.google.com" target="_blank" rel="noopener">Take me away (safe)</a>
+      <small>Made by Affaf — use responsibly 🙂</small>
+    </div>
+  </div>
+</body>
+</html>
